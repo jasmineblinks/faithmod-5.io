@@ -80,6 +80,7 @@ $(function () {
     // On first load, show home view
     showLoading("#main-content");
     $ajaxUtils.sendGetRequest(
+      homeHtml,
       allCategoriesUrl,
       buildAndShowCategoriesHTML,
       function (responseText) {
