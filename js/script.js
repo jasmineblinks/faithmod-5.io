@@ -80,7 +80,6 @@ $(function () {
     // On first load, show home view
     showLoading("#main-content");
     $ajaxUtils.sendGetRequest(
-      homeHtml,
       allCategoriesUrl,
       buildAndShowCategoriesHTML,
       function (responseText) {
@@ -104,7 +103,7 @@ $(function () {
           function (chooseRandomCategory) {
             var chosenCategoryShortName = buildCategoriesViewHtml(
               categories,
-              categoriesTitleHtml,
+              homeHtml,
               chooseRandomCategory
             );
             insertHtml("#main-content", chosenCategoryShortName);
